@@ -4,4 +4,23 @@ The icebox is not empty, there are at least three iterations and eight stories.
 Everything is logical and seems to fit the assignment and be appropriate for the project.
 I don't see any big changes that should be made, or any small ones either.
 I saw realistic and effective looking diagrams yesterday, but none today so he must be working on them.
-I don't see the ER diagram yet.
+
+For the ER diagram, I think there are a few issues, or maybe one big one:
+
+I don't think you should repeat the class entries per student, instead an enrollment-student-has-class 
+  table would allow one student entry and one class entry and many correspondance connections. Otherwise everytime
+  you add a student, you'd have to duplicate the class info - duplicated entries won't work. The gradebook table
+  nearly serves this purpose but with that in mind I think the connection should be reversed, many gradebooks per
+  class and the direct student-class connection severed.
+  
+  Same with per instructor, without an intermediary table you'd need a new class entry per instructor which quickly
+   leads to duplicate data. Instead an intermediary table allows one instructor entry and one class entry
+   and multiple connections. One way to make the intermediary table is with the many-to-many connector in Workbench.
+   The intermediary instructor-class table could be called something like instructor-teaches-class and could allow
+   multiple instructors to teach a class and multiple classes to be taught by an instructor.
+  
+  Each class could have multiple assignments and an intermediary student-has-assignment can hold assignment grades
+    while the enrollment table enrollment-student-has-class can hold class grades.
+  
+  You can unify login by tying each user class (student, instructor, admin) to an underlying user table to hold the id,
+    password, name, anything every type of user has.
