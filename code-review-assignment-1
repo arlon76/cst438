@@ -5,8 +5,8 @@ Everything is logical and seems to fit the assignment and be appropriate for the
 I don't see any big changes that should be made, or any small ones either.
 I saw realistic and effective looking diagrams yesterday, but none today so he must be working on them.
 
-For the ER diagram, I think there are a few issues, or maybe one big one, in that, each issue I list 
-  comes down to adding intermediary tables in order to make sure not to duplicate entries:
+For the ER diagram, I think there are a couple issues, or maybe one big one, in that, both issues I list 
+  come down to adding intermediary tables in order to make sure not to duplicate entries:
 
 I don't think you should repeat the class entries per student, instead an enrollment-student-has-class 
   table would allow one student entry and one class entry and many correspondance connections. Otherwise everytime
@@ -19,6 +19,8 @@ I don't think you should repeat the class entries per student, instead an enroll
    and multiple connections. One way to make the intermediary table is with the many-to-many connector in Workbench.
    The intermediary instructor-class table could be called something like instructor-teaches-class and could allow
    multiple instructors to teach a class and multiple classes to be taught by an instructor.
+  
+  Two more ideas are:
   
   Each class could have multiple assignments and an intermediary student-has-assignment can hold assignment grades
     while the enrollment table enrollment-student-has-class can hold class grades.
