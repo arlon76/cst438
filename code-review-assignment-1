@@ -20,7 +20,7 @@ I don't think you should repeat the class entries per student, instead an enroll
    The intermediary instructor-class table could be called something like instructor-teaches-class and could allow
    multiple instructors to teach a class and multiple classes to be taught by an instructor.
   
-  Two more ideas are:
+Two more ideas are:
   
   Each class could have multiple assignments and an intermediary student-has-assignment can hold assignment grades
     while the enrollment table enrollment-student-has-class can hold class grades.
