@@ -5,7 +5,8 @@ Everything is logical and seems to fit the assignment and be appropriate for the
 I don't see any big changes that should be made, or any small ones either.
 I saw realistic and effective looking diagrams yesterday, but none today so he must be working on them.
 
-For the ER diagram, I think there are a few issues, or maybe one big one:
+For the ER diagram, I think there are a few issues, or maybe one big one, in that, each issue I list 
+  comes down to adding intermediary tables in order to make sure not to duplicate entries:
 
 I don't think you should repeat the class entries per student, instead an enrollment-student-has-class 
   table would allow one student entry and one class entry and many correspondance connections. Otherwise everytime
